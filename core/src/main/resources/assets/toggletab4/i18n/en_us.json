@@ -1,7 +1,7 @@
 {
-  "example": {
+  "toggletab4": {
     "settings": {
-      "name": "ExampleAddon",
+      "name": "ToggleTab 4",
       "enabled": {
         "name": "Enabled"
       }
