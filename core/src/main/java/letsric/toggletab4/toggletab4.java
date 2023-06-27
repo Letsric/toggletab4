@@ -12,8 +12,8 @@ public class toggletab4 extends LabyAddon<toggletab4Config> {
   @Override
   protected void enable() {
     this.registerSettingCategory();
-    this.registerListener(new keyListener());
     this.registerListener(new gameTickListener());
+    this.registerListener(new keyListener());
   }
 
   @Override

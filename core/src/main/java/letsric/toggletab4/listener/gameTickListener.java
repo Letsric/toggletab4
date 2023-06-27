@@ -8,6 +8,7 @@ import net.labymod.api.event.client.lifecycle.GameTickEvent;
 public class gameTickListener {
 
   private final MinecraftInputMapping playerListButton;
+  public static boolean toggled = false;
 
   public gameTickListener() {
     this.playerListButton = Laby.labyAPI().minecraft().options().getInputMapping("key.playerlist");
@@ -15,10 +16,8 @@ public class gameTickListener {
 
   @Subscribe
   public void onGameTick(GameTickEvent event) {
-    if (keyListener.toggled) {
-      if (!playerListButton.isActuallyDown()) {
-        playerListButton.press();
-      }
+    if (toggled) {
+      playerListButton.press();
     }
   }
 
